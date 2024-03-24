@@ -25,6 +25,10 @@ function getComputerChoice() {
 }
 
 function playRound(computerChoice, playerChoice) {
+    if (playerChoice === null) {
+        return "Invalid choice for player!";
+    }
+
     computerChoice = computerChoice.toLowerCase();
     playerChoice = playerChoice.toLowerCase();
 
@@ -48,7 +52,34 @@ Player Choice: ${playerChoice}`;
     }
 }
 
-const playerChoice = "scissors";
-const computerChoice = getComputerChoice();
+function playGame() {
+    let playerScore = 0;
+    let computerScore = 0;
 
-console.log(playRound(computerChoice, playerChoice));
+    while (playerScore !== 3 && computerScore !== 3) {
+        let playerChoice = prompt("Please choose between \"Rock\", \"Paper\" or \"Scissors\": ");
+        let computerChoice = getComputerChoice();
+
+        result = playRound(computerChoice, playerChoice)
+
+        console.log(result);
+
+        if (result.includes("Player Wins")) {
+            playerScore++;
+        } else if (result.includes("Computer Wins")) {
+            computerScore++;
+        }
+
+        console.log(`Current Standings
+        Player: ${playerScore}
+        Computer: ${computerScore}`)
+    }
+
+    if (playerScore === 3) {
+        return "Player";
+    }
+
+    return "Computer";
+}
+
+console.log(playGame() + " wins!");
