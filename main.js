@@ -10,16 +10,45 @@ function getComputerChoice() {
 
     switch (choice) {
         case 0: {
-            return "Rock";
+            return "rock";
         }
         case 1: {
-            return "Paper";
+            return "paper";
         }
         case 2: {
-            return "Scissors";
+            return "scissors";
         }
         default: {
             return "Invalid number";
         }
     }
 }
+
+function playRound(computerChoice, playerChoice) {
+    computerChoice = computerChoice.toLowerCase();
+    playerChoice = playerChoice.toLowerCase();
+
+    let result =
+        `Computer Choice: ${computerChoice}
+Player Choice: ${playerChoice}`;
+
+    if (!["scissors", "rock", "paper"].includes(playerChoice) ||
+        !["scissors", "rock", "paper"].includes(computerChoice)) {
+        return result + "\nInvalid choice!"
+    }
+
+    if (computerChoice === playerChoice) {
+        return result + "\nResult: Tie!";
+    } else if ((computerChoice === "scissors" && playerChoice === "rock") ||
+        (computerChoice === "paper" && playerChoice === "scissors") ||
+        (computerChoice === "rock" && playerChoice === "paper")) {
+        return result + "\nResult: Player Wins!";
+    } else {
+        return result + "\nResult: Computer Wins!";
+    }
+}
+
+const playerChoice = "scissors";
+const computerChoice = getComputerChoice();
+
+console.log(playRound(computerChoice, playerChoice));
