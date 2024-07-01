@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Rock Paper Scissors</title>
-</head>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./main.js" defer></script>
+  </head>
 
-<body>
-    <script src="./main.js"></script>
-</body>
+  <body>
+    <div id="header">
+      <img src="./res/Title.svg" class="filter-black" />
+    </div>
 
+    <div id="main">
+      <div id="human" class="player">
+        <div class="player-text">Player</div>
+        <div class="player-score">0</div>
+      </div>
+
+      <div id="game">
+        <div id="buttons">
+          <button id="rock">
+            <img src="./res/Rock.svg" class="filter-black" />
+          </button>
+          <button id="paper">
+            <img src="./res/Paper.svg" class="filter-black" />
+          </button>
+          <button id="scissors">
+            <img src="./res/Scissors.svg" class="filter-black" />
+          </button>
+        </div>
+      </div>
+
+      <div id="computer" class="player">
+        <div class="player-text">Computer</div>
+        <div class="player-score">0</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <a
+        class="credits"
+        href="https://www.vecteezy.com/free-vector/rock-paper-scissors"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Rock Paper Scissors Vectors by Vecteezy</a
+      >
+      <a
+        class="credits"
+        href="https://www.vecteezy.com/free-vector/curved-arrow"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Curved Arrow Vectors by Vecteezy</a
+      >
+    </div>
+  </body>
 </html>

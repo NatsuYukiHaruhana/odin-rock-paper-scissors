@@ -1,0 +1,97 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(38, 36, 41);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    width: 100vw;
+    margin: auto 2%;
+}
+
+.player {
+    padding: 3% 0%;
+    background: rgb(38, 36, 41);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-text {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.player-score {
+    font-size: 108px;
+}
+
+#game {
+    padding: 2% 0%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#buttons > button {
+    width: 125px;
+    height: fit-content;
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+    cursor: pointer;
+}
+
+#buttons > button > img {
+    width: 100%;
+}
+
+#game > img {
+    width: 125px;
+}
+
+#header, #footer {
+    width: 100vw;
+    margin: 2%;
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#header > img {
+    width: 300px;
+}
+
+.credits {
+    text-decoration: none;
+    color: white;
+}
+
+.filter-black {
+    filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(102deg) brightness(106%) contrast(100%);
+}
